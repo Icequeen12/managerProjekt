@@ -1,5 +1,6 @@
 package com.example.manager;
 
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ public class WorkersList extends ArrayAdapter<WorkersUpload> {
 
     private Activity context;
     private List<WorkersUpload> workersUploadList;
+
 
     public WorkersList(Activity context, List<WorkersUpload> workersUploadList){
         super(context,R.layout.workers_list, workersUploadList);
@@ -34,5 +36,6 @@ public class WorkersList extends ArrayAdapter<WorkersUpload> {
 
         return listViewItem;
     }
+
 
 }

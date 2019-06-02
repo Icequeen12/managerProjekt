@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OneWorkerActivity">
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickEdit"
+        android:text="Edytuj" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickCall"
+        android:text="Zadzwoń" />
+
+    <Button
+        android:id="@+id/btnEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickEmail"
+        android:text="Napisz maila" />
+
+    <Button
+        android:id="@+id/btnKickOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickKick"
+        android:text="Zwolnij" />
+</LinearLayout>

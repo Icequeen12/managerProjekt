@@ -45,7 +45,6 @@ public class NewWorker extends AppCompatActivity {
 
     public void saveData(){
 
-        //String path="workers/"+getIntent().getExtras().getString("userName")+"/write";
         mFirebaseInstance = FirebaseDatabase.getInstance();
         mFirebaseDatabase = mFirebaseInstance.getReference("workers");
 
@@ -53,7 +52,7 @@ public class NewWorker extends AppCompatActivity {
             id = mFirebaseDatabase.push().getKey();
         }
 
-        WorkersUpload result = new WorkersUpload(name,lastName);
+        WorkersUpload result = new WorkersUpload(name,lastName,phone,email);
         mFirebaseDatabase.child(id).setValue(result);
 
         finish();

@@ -4,13 +4,26 @@ public class WorkersUpload {
 
     private String name;
     private String lastName;
+    private String phone;
+    private String email;
+    private  String id;
 
     public WorkersUpload() {
     }
 
-    public WorkersUpload(String name, String lastName) {
+    public WorkersUpload(String name, String lastName, String phone, String email) {
         this.name = name;
         this.lastName = lastName;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -29,4 +42,19 @@ public class WorkersUpload {
         this.lastName = lastName;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
