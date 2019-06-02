@@ -3,9 +3,11 @@ package com.example.manager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -39,7 +41,16 @@ public class NewWorker extends AppCompatActivity {
         phone = editPhone.getText().toString().trim();
         email = editEmail.getText().toString().trim();
 
-        saveData();
+        if(name.isEmpty() || lastName.isEmpty() || phone.isEmpty() || email.isEmpty()){
+            Toast.makeText(NewWorker.this, "Uzupełnij dane", Toast.LENGTH_LONG).show();
+        }else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            Toast.makeText(NewWorker.this, "Podaj poprawny email", Toast.LENGTH_LONG).show();
+        }else if (phone.length()!=9){
+            Toast.makeText(NewWorker.this, "Podaj poprawny numer", Toast.LENGTH_LONG).show();
+        }
+        else {
+            saveData();
+        }
     }
 
 

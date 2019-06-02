@@ -63,7 +63,9 @@ public class OneWorkerActivity extends AppCompatActivity {
         intent.putExtra("lastName",lastName);
         intent.putExtra("phone",phone);
         intent.putExtra("email",email);
+        intent.putExtra("id",id);
         startActivity(intent);
+        finish();
     }
 
     public void onClickKick(View view){
