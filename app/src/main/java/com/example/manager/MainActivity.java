@@ -16,7 +16,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnAccept;
     private EditText editEmail, editPassword;
     private FirebaseAuth firebaseAuth;
 
@@ -28,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
         editEmail = (EditText) findViewById(R.id.editEmail);
         editPassword = (EditText) findViewById(R.id.editPassword);
-        btnAccept = (Button) findViewById(R.id.btnAccept);
         firebaseAuth =  FirebaseAuth.getInstance();
 
     }
@@ -39,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
         String password = editPassword.getText().toString().trim();
 
         if (email.isEmpty() || password.isEmpty()) {
-            Intent intent = new Intent(MainActivity.this, ListActivity.class);
-            startActivity(intent);
             Toast.makeText(MainActivity.this, "Uzupełnij wszystkie pola ", Toast.LENGTH_LONG).show();
         } else {
             firebaseAuth.signInWithEmailAndPassword(email, password)

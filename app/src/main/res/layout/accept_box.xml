@@ -2,18 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/back"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="89dp"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
         android:layout_weight="1"
-        android:text="Jesteś pewnien ?" />
+        android:textStyle="bold|italic"
+        android:text="@string/ask" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -23,15 +28,17 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClickYes"
-            android:text="Tak" />
+            android:background="@drawable/shapebutton"
+            android:text="@string/yes" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/shapebutton"
             android:onClick="onClickNope"
-            android:text="Nie" />
+            android:text="@string/no" />
     </LinearLayout>
 
 </LinearLayout>

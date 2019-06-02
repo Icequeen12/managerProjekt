@@ -1,6 +1,24 @@
 <resources>
-    <string name="app_name">manager</string>
+    <string name="app_name">BOSS</string>
     <string name="password">Hasło</string>
     <string name="email">Email</string>
     <string name="login">Zaloguj</string>
+    <string name="name">Imię</string>
+    <string name="lastName">Nazwisko</string>
+    <string name="number">Numer telefonu</string>
+    <string name="emailEdit">Adres e-mail</string>
+    <string name="save">Zapisz</string>
+    <string name="edit">Zmień dane pracownika</string>
+    <string name="ask">Jesteś pewien?</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+    <string name="editBtn">Edytuj</string>
+    <string name="callBtn">Zadzwoń</string>
+    <string name="textBtn">Napisz email</string>
+    <string name="kickOutBtn">Usuń</string>
+    <string name="first">Zarządzaj</string>
+    <string name="add">Dodaj</string>
+    <string name="list">Lista pracowników</string>
+    <string name="newWorker">Dodaj pracownika</string>
+
 </resources>

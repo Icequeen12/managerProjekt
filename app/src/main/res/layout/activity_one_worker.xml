@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/back"
     android:orientation="vertical"
     tools:context=".OneWorkerActivity">
 
@@ -12,50 +13,73 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClickEdit"
-        android:text="Edytuj" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shapebutton"
+        android:text="@string/editBtn" />
 
     <TextView
         android:id="@+id/txtName"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/txtLastName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/txtPhone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/txtEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnCall"
         android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
         android:layout_height="wrap_content"
         android:onClick="onClickCall"
-        android:text="Zadzwoń" />
+        android:background="@drawable/shapebutton"
+        android:text="@string/callBtn" />
 
     <Button
         android:id="@+id/btnEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClickEmail"
-        android:text="Napisz maila" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shapebutton"
+        android:text="@string/textBtn" />
 
     <Button
         android:id="@+id/btnKickOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClickKick"
-        android:text="Zwolnij" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shapebutton"
+        android:text="@string/kickOutBtn" />
 </LinearLayout>
