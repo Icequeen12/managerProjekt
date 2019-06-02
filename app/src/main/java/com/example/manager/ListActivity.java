@@ -1,7 +1,9 @@
 package com.example.manager;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -53,5 +55,10 @@ public class ListActivity extends AppCompatActivity {
     public void task(){
         WorkersList workerAdapter = new WorkersList(ListActivity.this, uploads);
         listViewWorkers.setAdapter(workerAdapter);
+    }
+
+    public void addWorker(View view){
+        Intent intent = new Intent(ListActivity.this, NewWorker.class);
+        startActivity(intent);
     }
 }

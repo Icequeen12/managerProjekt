@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         btnAccept = (Button) findViewById(R.id.btnAccept);
         firebaseAuth =  FirebaseAuth.getInstance();
 
-
-
     }
 
     public void onClick(View view) {

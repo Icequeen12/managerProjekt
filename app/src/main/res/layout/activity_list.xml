@@ -4,7 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ListActivity">
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_weight="1"
+        android:onClick="addWorker"
+        android:text="Dodaj" />
 
     <ListView
         android:id="@+id/list"
