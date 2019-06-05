@@ -17,8 +17,8 @@ public class WorkersList extends ArrayAdapter<WorkersUpload> {
     private List<WorkersUpload> workersUploadList;
 
 
-    public WorkersList(Activity context, List<WorkersUpload> workersUploadList){
-        super(context,R.layout.workers_list, workersUploadList);
+    public WorkersList(Activity context, List<WorkersUpload> workersUploadList) {
+        super(context, R.layout.workers_list, workersUploadList);
         this.context = context;
         this.workersUploadList = workersUploadList;
     }

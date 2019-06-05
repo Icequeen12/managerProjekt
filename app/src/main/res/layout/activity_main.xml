@@ -69,9 +69,9 @@
 
     <Button
         android:id="@+id/btnAccept"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
         android:background="@drawable/shapebutton"
+        android:onClick="onClick"
         android:text="@string/login" />
 </LinearLayout>

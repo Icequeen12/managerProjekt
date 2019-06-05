@@ -19,11 +19,9 @@ import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
 
-    private DatabaseReference mDatabase;
     private List<WorkersUpload> uploads;
     private List<String> idList;
     private ListView listViewWorkers;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +30,9 @@ public class ListActivity extends AppCompatActivity {
 
         listViewWorkers = (ListView) findViewById(R.id.list);
         uploads = new ArrayList<>();
-        idList= new ArrayList<>();
+        idList = new ArrayList<>();
 
-        mDatabase = FirebaseDatabase.getInstance().getReference("workers");
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("workers");
 
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
@@ -65,11 +63,11 @@ public class ListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ListActivity.this, OneWorkerActivity.class);
-                intent.putExtra("name",uploads.get(position).getName());
-                intent.putExtra("lastName",uploads.get(position).getLastName());
-                intent.putExtra("phone",uploads.get(position).getPhone());
-                intent.putExtra("email",uploads.get(position).getEmail());
-                intent.putExtra("id",idList.get(position));
+                intent.putExtra("name", uploads.get(position).getName());
+                intent.putExtra("lastName", uploads.get(position).getLastName());
+                intent.putExtra("phone", uploads.get(position).getPhone());
+                intent.putExtra("email", uploads.get(position).getEmail());
+                intent.putExtra("id", idList.get(position));
                 startActivity(intent);
             }
         });

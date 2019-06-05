@@ -20,17 +20,16 @@ public class OneWorkerActivity extends AppCompatActivity {
 
     private String name, lastName, phone, email, id;
     private AlertDialog alertDialog;
-    private TextView txtName, txtLastName, txtPhone, txtEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one_worker);
 
-        txtName = (TextView) findViewById(R.id.txtName);
-        txtLastName = (TextView) findViewById(R.id.txtLastName);
-        txtPhone = (TextView) findViewById(R.id.txtPhone);
-        txtEmail = (TextView) findViewById(R.id.txtEmail);
+        TextView txtName = (TextView) findViewById(R.id.txtName);
+        TextView txtLastName = (TextView) findViewById(R.id.txtLastName);
+        TextView txtPhone = (TextView) findViewById(R.id.txtPhone);
+        TextView txtEmail = (TextView) findViewById(R.id.txtEmail);
 
         name = getIntent().getExtras().getString("name");
         lastName = getIntent().getExtras().getString("lastName");
@@ -45,34 +44,34 @@ public class OneWorkerActivity extends AppCompatActivity {
     }
 
     public void onClickCall(View view) {
-        Intent i=new Intent(Intent.ACTION_DIAL,Uri.parse("tel:" + phone));
+        Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phone));
         startActivity(i);
     }
 
-    public  void onClickEmail(View view){
+    public void onClickEmail(View view) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("plain/text");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[] { email });
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{email});
         intent.putExtra(Intent.EXTRA_SUBJECT, "Praca");
         startActivity(Intent.createChooser(intent, ""));
     }
 
-    public void onClickEdit(View view){
+    public void onClickEdit(View view) {
         Intent intent = new Intent(OneWorkerActivity.this, EditActivity.class);
-        intent.putExtra("name",name);
-        intent.putExtra("lastName",lastName);
-        intent.putExtra("phone",phone);
-        intent.putExtra("email",email);
-        intent.putExtra("id",id);
+        intent.putExtra("name", name);
+        intent.putExtra("lastName", lastName);
+        intent.putExtra("phone", phone);
+        intent.putExtra("email", email);
+        intent.putExtra("id", id);
         startActivity(intent);
         finish();
     }
 
-    public void onClickKick(View view){
+    public void onClickKick(View view) {
 
-        AlertDialog.Builder dialogBuilder =new AlertDialog.Builder(this);
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
-        final View dialogView =inflater.inflate(R.layout.accept_box,null);
+        final View dialogView = inflater.inflate(R.layout.accept_box, null);
         dialogBuilder.setView(dialogView);
 
         alertDialog = dialogBuilder.create();
@@ -80,13 +79,13 @@ public class OneWorkerActivity extends AppCompatActivity {
 
     }
 
-    public  void onClickYes(View view){
+    public void onClickYes(View view) {
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("workers").child(id);
         databaseReference.removeValue();
         finish();
     }
 
-    public void onClickNope(View view){
+    public void onClickNope(View view) {
         alertDialog.cancel();
     }
 }

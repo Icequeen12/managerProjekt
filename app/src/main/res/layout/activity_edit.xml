@@ -94,10 +94,11 @@
 
     <Button
         android:id="@+id/btnOk"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:onClick="onClickOk"
         android:background="@drawable/shapebutton"
+        android:layout_gravity="center"
+        android:onClick="onClickOk"
         android:text="@string/save" />
 </LinearLayout>
